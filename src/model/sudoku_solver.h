@@ -3,10 +3,6 @@
 class SudokuSolver
 {
 public:
-    std::string filename;
-
-    SudokuSolver(std::string f) : filename(f) {};
-    ~SudokuSolver() {};
-
+    void init_from_file(std::string& filename);
     void solve();
 };

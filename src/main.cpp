@@ -23,7 +23,8 @@ int main(int argc, char* argv[]) {
         std::exit(1);
     }
 
-    SudokuSolver solver(csv_grid);
+    SudokuSolver solver;
+    solver.init_from_file(csv_grid);
     solver.solve();
 
     return 0;
