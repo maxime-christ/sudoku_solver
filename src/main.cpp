@@ -1,5 +1,6 @@
 #include <iostream>
 #include <argparse/argparse.hpp>
+#include "model/sudoku_solver.h"
 
 int main(int argc, char* argv[]) {
     argparse::ArgumentParser program("sudoku_solver", "1.0", argparse::default_arguments::help);
@@ -22,7 +23,8 @@ int main(int argc, char* argv[]) {
         std::exit(1);
     }
 
-    std::cout << "Reading file " << csv_grid << std::endl;
+    SudokuSolver solver(csv_grid);
+    solver.solve();
 
     return 0;
 }

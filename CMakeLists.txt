@@ -13,5 +13,9 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(argparse)
 
+add_library(solver)
+add_subdirectory(src/model)
+
 add_executable(sudoku_solver src/main.cpp)
+target_link_libraries(sudoku_solver solver)
 target_link_libraries(sudoku_solver argparse)
