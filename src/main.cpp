@@ -27,5 +27,7 @@ int main(int argc, char* argv[]) {
     solver.init_from_file(csv_grid);
     solver.solve();
 
+    std::cout << solver.solution() << std::endl;
+
     return 0;
 }
