@@ -50,3 +50,8 @@ Grid SudokuSolver::solution() const
     assert(grid.is_solved());
     return grid;
 }
+
+void SudokuSolver::setCellValue(int& x, int& y, int value)
+{
+
+}
