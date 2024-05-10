@@ -6,7 +6,7 @@
 void SudokuSolver::init_from_file(std::string& filename)
 {
     std::cout << "Reading file " << filename << std::endl;
-    std::ifstream input {filename};
+    std::ifstream input(filename);
 
     if (!input.is_open())
     {
