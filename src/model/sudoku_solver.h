@@ -11,5 +11,4 @@ public:
     Grid solution() const;
 private:
     Grid grid;
-    bool solution_ready;
 };

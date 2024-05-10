@@ -4,7 +4,6 @@
 void SudokuSolver::init_from_file(std::string& filename)
 {
     std::cout << "Reading file " << filename << std::endl;
-    solution_ready = true;
 
     // Loop through CSV and push_back events to constraint_event_list
 }
@@ -17,6 +16,6 @@ void SudokuSolver::solve()
 
 Grid SudokuSolver::solution() const
 {
-    assert(solution_ready);
+    assert(grid.is_solved());
     return grid;
 }
