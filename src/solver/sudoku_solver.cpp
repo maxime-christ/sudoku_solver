@@ -14,20 +14,23 @@ void SudokuSolver::init_from_file(std::string& filename)
         std::exit(1);
     }
 
+    grid = Grid();
     int i = 0;
     int x, y;
     std::string line;
+
     while(std::getline(input, line))
     {
         std::istringstream ss(std::move(line));
-        std::string token;
-        while(std::getline(ss, token, ','))
+        std::string stoken;
+        while(std::getline(ss, stoken, ','))
         {
-            if (!token.empty())
+            if (!stoken.empty())
             {
                 x = i / 9;
                 y = i % 9;
-                std::cout << "Token at (" << x << ',' << y << ") is " << token << std::endl;
+                int itoken = std::stoi(stoken);
+                std::cout << "Token at (" << x << ',' << y << ") is " << itoken << std::endl;
             }
 
             i++;
