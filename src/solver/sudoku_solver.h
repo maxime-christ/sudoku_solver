@@ -1,7 +1,7 @@
 #pragma once
 
 #include <iostream>
-#include "grid.h"
+#include "../model/data_model/grid.h"
 
 class SudokuSolver
 {

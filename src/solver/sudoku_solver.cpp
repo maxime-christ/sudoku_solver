@@ -38,6 +38,7 @@ void SudokuSolver::init_from_file(std::string& filename)
 void SudokuSolver::solve()
 {
     // TODO: Solve it!
+    grid.solve(); // EZ
     std::cout << "Sudoku solved!" << std::endl;
 }
 

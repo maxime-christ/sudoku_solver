@@ -6,7 +6,8 @@ class Grid
 {
 public:
     Grid() : solved(false) {};
-    inline bool is_solved() { return solved; };
+    inline bool is_solved() const { return solved; };
+    inline void solve() { solved = true; };
 private:
     bool solved;
 };
