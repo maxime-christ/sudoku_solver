@@ -16,7 +16,7 @@ public:
 
 protected:
     // Command related API
-    void setCellValue(int& x, int& y, int value);
+    void setCellValue(int& x, int& y, int& value);
 
 private:
     std::vector<SetCellValueCommand*> constraints_cmd_list;

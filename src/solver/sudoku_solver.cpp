@@ -58,7 +58,7 @@ const Grid* SudokuSolver::solution() const
     return &grid;
 }
 
-void SudokuSolver::setCellValue(int& x, int& y, int value)
+void SudokuSolver::setCellValue(int& x, int& y, int& value)
 {
 
 }
