@@ -14,7 +14,6 @@ void SudokuSolver::init_from_file(std::string& filename)
         std::exit(1);
     }
 
-    grid = Grid();
     int i = 0;
     int x, y;
     std::string line;
