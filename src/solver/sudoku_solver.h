@@ -19,8 +19,8 @@ protected:
     void setCellValue(int& x, int& y, int value);
 
 private:
-    std::vector<SetCellValueCommand> constraints_cmd_list;
-    std::vector<Command> incidential_cmd_list;
+    std::vector<SetCellValueCommand*> constraints_cmd_list;
+    std::vector<Command*> incidential_cmd_list;
     Grid grid;
 
     friend SetCellValueCommand;
