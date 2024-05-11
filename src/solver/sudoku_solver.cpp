@@ -17,13 +17,18 @@ void SudokuSolver::init_from_file(std::string& filename)
     int i = 0;
     int x, y;
     std::string line;
+    std::string stoken;
+    std::string delimiter = ",";
+    size_t pos;
 
     while(std::getline(input, line))
     {
-        std::istringstream ss(std::move(line));
-        std::string stoken;
-        while(std::getline(ss, stoken, ','))
+        do
         {
+            pos = line.find(delimiter);
+            stoken = line.substr(0, pos);
+            line.erase(0, pos + delimiter.length());
+
             if (!stoken.empty())
             {
                 x = i / 9;
@@ -36,7 +41,7 @@ void SudokuSolver::init_from_file(std::string& filename)
             }
 
             i++;
-        }
+        } while (pos != std::string::npos);
     }
 }
 
