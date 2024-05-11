@@ -1,12 +1,12 @@
 #pragma once
 
-#include <set>
+#include <array>
 class Cell;
 
 class Container
 {
 public:
-    Container(std::set<Cell*> c);
+    Container(std::array<Cell*,9> c);
 private:
-    std::set<Cell*> cells; // always 9 though
+    std::array<Cell*,9> cells;
 };
