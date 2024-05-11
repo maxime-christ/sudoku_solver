@@ -2,4 +2,8 @@ target_sources(solver
     PUBLIC
     grid.h
     grid.cpp
+    cell.h
+    cell.cpp
+    container.h
+    container.cpp
     )
