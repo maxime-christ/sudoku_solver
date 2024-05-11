@@ -15,15 +15,17 @@ public:
 
 protected:
     inline void setValue(int val) { value = val; };
-    inline void setRow(Container r) { row = r; };
-    inline void setColumn(Container col) { column = col; };
-    inline void setSquare(Container sq) { square = sq; };
+    inline void setRow(Container* r) { row = r; };
+    inline void setColumn(Container* col) { column = col; };
+    inline void setSquare(Container* sq) { square = sq; };
     friend Grid;
 
 private:
     int value;
     std::set<int> tags;
-    Container row, column, square;
+    Container* row;
+    Container* column;
+    Container* square;
     static const int INIT_TAGS[9];
 };
 
