@@ -48,6 +48,15 @@ void SudokuSolver::init_from_file(std::string& filename)
 void SudokuSolver::solve()
 {
     // TODO: Solve it!
+    SetCellValueCommand* cmd;
+    while(!constraints_cmd_list.empty())
+    {
+        cmd = constraints_cmd_list.back();
+        constraints_cmd_list.pop_back();
+        cmd->execute();
+        delete cmd;
+    }
+
     grid.solve(); // EZ
     std::cout << "Sudoku solved!" << std::endl;
 }
@@ -60,5 +69,5 @@ const Grid* SudokuSolver::solution() const
 
 void SudokuSolver::setCellValue(int& x, int& y, int& value)
 {
-
+    grid.fill(x, y, value);
 }

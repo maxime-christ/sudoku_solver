@@ -58,6 +58,11 @@ Grid::~Grid()
         delete square;
 }
 
+void Grid::fill(int& x, int& y, int& value)
+{
+    cells[x][y].setValue(value);
+}
+
 std::ostream & operator<<(std::ostream& stream, Grid const& grid)
 {
     stream << " _ _ _ _ _ _ _ _ _ " << std::endl;

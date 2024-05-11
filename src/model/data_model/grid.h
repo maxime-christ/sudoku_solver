@@ -13,9 +13,11 @@ class Grid
 public:
     Grid();
     ~Grid();
+    void fill(int& x, int& y, int& value);
+    inline void solve() { solved = true; };
+
     inline bool is_solved() const { return solved; };
     inline CellGrid getCells() const { return cells; }
-    inline void solve() { solved = true; };
 private:
     bool solved;
     CellGrid cells;
