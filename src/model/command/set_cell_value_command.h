@@ -8,7 +8,7 @@ class SudokuSolver;
 class SetCellValueCommand : public Command
 {
 public:
-    SetCellValueCommand(SudokuSolver &aSolver, int aX, int aY, int aValue);
+    SetCellValueCommand(SudokuSolver& aSolver, int aX, int aY, int aValue);
     void execute();
 private:
     SudokuSolver& solver;
