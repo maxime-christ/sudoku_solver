@@ -31,6 +31,9 @@ void SudokuSolver::init_from_file(std::string& filename)
                 y = i % 9;
                 int itoken = std::stoi(stoken);
                 std::cout << "Token at (" << x << ',' << y << ") is " << itoken << std::endl;
+
+                SetCellValueCommand cmd(*this, x, y, itoken);
+                constraints_cmd_list.push_back(cmd);
             }
 
             i++;
