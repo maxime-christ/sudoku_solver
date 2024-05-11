@@ -47,10 +47,10 @@ void SudokuSolver::solve()
     std::cout << "Sudoku solved!" << std::endl;
 }
 
-Grid SudokuSolver::solution() const
+const Grid* SudokuSolver::solution() const
 {
     assert(grid.is_solved());
-    return grid;
+    return &grid;
 }
 
 void SudokuSolver::setCellValue(int& x, int& y, int value)

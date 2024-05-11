@@ -12,7 +12,7 @@ public:
     // User exposed API
     void init_from_file(std::string& filename);
     void solve();
-    Grid solution() const;
+    const Grid* solution() const;
 
 protected:
     // Command related API
